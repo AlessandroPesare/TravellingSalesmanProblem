@@ -20,6 +20,23 @@ def vectorToDistMatrix(coords):
 
     return dist_matrix
 
+def vectorToDistMatrixRandom(coords):
+    """
+    Create the distance matrix
+    """
+    num_points = len(coords)
+    dist_matrix = np.zeros((num_points, num_points))
+
+    for i in range(num_points):
+        for j in range(i + 1, num_points):
+            # Calcola la distanza euclidea tra i punti i e j
+            distance = np.random.randint(1, 11)
+            # Assegna la distanza alla matrice delle distanze (simmetrica)
+            dist_matrix[i][j] = distance
+            dist_matrix[j][i] = distance  # La matrice è simmetrica
+
+    return dist_matrix
+
 def nearestNeighbourSolution(dist_matrix):
     num_nodes = len(dist_matrix)
     start_node = random.randrange(num_nodes)

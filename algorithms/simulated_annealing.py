@@ -34,9 +34,9 @@ class SimulatedAnnealing:
         self.stopping_iter = stopping_iter
         self.iteration = 1
 
-        self.dist_matrix = tsp_utils.vectorToDistMatrix(coords)
+        self.dist_matrix = tsp_utils.vectorToDistMatrixRandom(coords)
         #solution initialization
-        self.curr_solution = tsp_utils.nearestNeighbourSolution(self.dist_matrix)
+        self.curr_solution = tsp_utils.nearestNeighbourSolution(tsp_utils.vectorToDistMatrix(coords))
         self.best_solution = self.curr_solution
 
         self.solution_history = []

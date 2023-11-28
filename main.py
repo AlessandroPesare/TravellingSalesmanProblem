@@ -6,15 +6,15 @@ def main():
     #set the simulated annealing algorithm params
     temp = 1000
     stopping_temp = 0.00000001
-    alpha = 0.99777777
-    stopping_iter = 10000000
+    alpha = 0.999777
+    stopping_iter = 100000
 
     #set the dimensions of the grid
     size_width = 200
     size_height = 200
 
     #cities to visit
-    population_size = 70
+    population_size = 1000
 
     #generate random list of nodes in the grid
     nodes = NodeGenerator(size_width, size_height, population_size).generate()
