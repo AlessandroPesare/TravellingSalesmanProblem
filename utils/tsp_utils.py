@@ -2,7 +2,7 @@ import math
 import random
 import numpy as np
 
-
+# geometric istance
 def vectorToDistMatrix(coords):
     """
     Create the distance matrix
@@ -19,7 +19,8 @@ def vectorToDistMatrix(coords):
             dist_matrix[j][i] = distance  # La matrice è simmetrica
 
     return dist_matrix
-
+    
+#non geometric istance
 def vectorToDistMatrixRandom(coords):
     """
     Create the distance matrix
